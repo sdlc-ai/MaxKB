@@ -1,40 +1,19 @@
-# 基础镜像使用 Python + PostgreSQL
-FROM python:3.11-slim-bullseye AS python-pg-base
-
-# 设置时区和安装基础依赖
-ARG DEPENDENCIES="                    \
-        libexpat1-dev                 \
-        libffi-dev                    \
-        curl                          \
-        ca-certificates               \
-        vim                          \
-        gettext                       \
-        postgresql-15-pgvector        \
-        python3-pip"
-
-RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
-    echo "Asia/Shanghai" > /etc/timezone && \
-    apt-get update && apt-get install -y --no-install-recommends $DEPENDENCIES && \
-    apt-get clean all  && \
-    rm -rf /var/lib/apt/lists/*
-
-# 向量模型构建阶段
-FROM python-pg-base AS vector-model
-COPY installer/install_model.py install_model.py
-RUN pip3 install --upgrade pip setuptools && \
-    pip install pycrawlers transformers && \
-    python3 install_model.py
-
-# Web 构建阶段
+FROM sdlc-vector-model:v1.0.1 AS vector-model
 FROM node:18-alpine3.18 AS web-build
 COPY ui ui
 RUN cd ui && \
     npm install && \
     npm run build && \
     rm -rf ./node_modules
+FROM sdlc-python-pg:python3.11-pg15.8 AS stage-build
 
-# 应用构建阶段
-FROM python-pg-base AS stage-build
+ARG DEPENDENCIES="                    \
+        python3-pip"
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends $DEPENDENCIES && \
+    apt-get clean all  && \
+    rm -rf /var/lib/apt/lists/*
 
 COPY . /opt/maxkb/app
 RUN mkdir -p /opt/maxkb/app /opt/maxkb/model /opt/maxkb/conf && \
@@ -50,13 +29,11 @@ RUN python3 -m venv /opt/py3 && \
     poetry install && \
     export MAXKB_CONFIG_TYPE=ENV && python3 /opt/maxkb/app/apps/manage.py compilemessages
 
-# 最终阶段
-FROM python-pg-base
+FROM sdlc-python-pg:python3.11-pg15.8
 ARG DOCKER_IMAGE_TAG=dev \
     BUILD_AT \
     GITHUB_COMMIT
 
-# 设置环境变量
 ENV MAXKB_VERSION="${DOCKER_IMAGE_TAG} (build at ${BUILD_AT}, commit: ${GITHUB_COMMIT})" \
     MAXKB_CONFIG_TYPE=ENV \
     MAXKB_DB_NAME=maxkb \
@@ -80,7 +57,7 @@ ENV MAXKB_VERSION="${DOCKER_IMAGE_TAG} (build at ${BUILD_AT}, commit: ${GITHUB_C
 WORKDIR /opt/maxkb/app
 COPY --from=stage-build /opt/maxkb /opt/maxkb
 COPY --from=stage-build /opt/py3 /opt/py3
-COPY --from=vector-model /opt/maxkb/model /opt/maxkb/model
+COPY --from=vector-model /opt/maxkb/app/model /opt/maxkb/model
 
 RUN chmod 755 /opt/maxkb/app/installer/run-maxkb.sh && \
     cp -r /opt/maxkb/model/base/hub /opt/maxkb/model/tokenizer && \
