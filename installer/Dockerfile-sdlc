@@ -21,6 +21,8 @@ RUN mkdir -p /opt/maxkb/app /opt/maxkb/model /opt/maxkb/conf && \
 
 COPY --from=web-build ui /opt/maxkb/app/ui
 WORKDIR /opt/maxkb/app
+RUN export POETRY_PYPI_MIRROR_URL=https://mirrors.cloud.tencent.com/pypi/simple/
+RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 RUN python3 -m venv /opt/py3 && \
     pip install poetry==1.8.5 --break-system-packages && \
     poetry config virtualenvs.create false && \
