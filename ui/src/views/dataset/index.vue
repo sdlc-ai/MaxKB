@@ -49,7 +49,8 @@
                 @click="router.push({ path: `/dataset/${item.id}/document` })"
               >
                 <template #icon>
-                  <AppAvatar
+                  <img style="margin-right: 8px;width: 36px;height: 36px;" src="@/assets/icon/dataset.png" alt="">
+                  <!-- <AppAvatar
                     v-if="item.type === '1'"
                     class="mr-8 avatar-purple"
                     shape="square"
@@ -68,7 +69,7 @@
                   </AppAvatar>
                   <AppAvatar v-else class="mr-8 avatar-blue" shape="square" :size="32">
                     <img src="@/assets/icon_document.svg" style="width: 58%" alt="" />
-                  </AppAvatar>
+                  </AppAvatar> -->
                 </template>
                 <template #subTitle>
                   <el-text class="color-secondary" size="small">
