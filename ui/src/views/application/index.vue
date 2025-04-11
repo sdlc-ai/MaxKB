@@ -25,6 +25,10 @@
           style="min-width: 240px"
           clearable
         />
+        <el-button style="margin-left: 5px;padding-right: 15px;" type="primary" class="custom-btn">
+          <el-icon style="margin-left: 14px;margin-right: 7px;"><Search /></el-icon>
+          搜索
+        </el-button>
       </div>
     </div>
     <div v-loading.fullscreen.lock="paginationConfig.current_page === 1 && loading">
