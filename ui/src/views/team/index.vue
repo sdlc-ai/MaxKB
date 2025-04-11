@@ -75,7 +75,7 @@
         </div>
 
         <div class="submit-button">
-          <el-button type="primary" @click="submitPermissions">{{ $t('common.save') }}</el-button>
+          <el-button type="primary" class="custom-btn" @click="submitPermissions">{{ $t('common.save') }}</el-button>
         </div>
       </div>
     </div>

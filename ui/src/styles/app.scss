@@ -804,5 +804,28 @@ h5 {
   border-color:rgba(138, 198, 255, 0.5) ;
 }
 
-// 自定义按钮primary
-
+// 自定义样式 by JuiceBox 2025/4/11 ---start
+// 渐变色按钮
+.custom-btn{
+  background: linear-gradient(90deg, rgba(18, 171, 219, 1) 0%, rgba(16, 116, 163, 1) 100%);
+  border: none;
+}
+.custom-btn:hover{
+  background: rgba(0, 112, 173, 1);
+  border: none;
+}
+// 禁用的渐变色按钮
+.custom-btn.is-disabled{
+  background-color: rgba(200, 235, 255, 1);
+  border: none;
+}
+.custom-btn.is-disabled:hover{
+  background-color: rgba(200, 235, 255, 1);
+  border: none;
+}
+// 菜单选中颜色
+ .el-menu .sidebar-item .el-menu-item.is-active{
+  color: white !important;
+  background: linear-gradient(90deg, rgba(18, 171, 219, 1) 0%, rgba(16, 116, 163, 1) 100%) !important;
+}
+// 自定样式 by JuiceBox 2025/4/11 ---end

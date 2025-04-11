@@ -58,7 +58,7 @@
     <template #footer>
       <span class="dialog-footer">
         <el-button @click.prevent="dialogVisible = false"> {{ $t('common.cancel') }} </el-button>
-        <el-button type="primary" @click="submitHandle"> {{ $t('common.save') }} </el-button>
+        <el-button type="primary" class="custom-btn" @click="submitHandle"> {{ $t('common.save') }} </el-button>
       </span>
     </template>
   </el-dialog>

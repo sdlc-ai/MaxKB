@@ -18,7 +18,7 @@
       </p>
     </el-card>
 
-    <el-button type="primary" class="mb-16" @click="createApiKey">
+    <el-button type="primary" class="mb-16 custom-btn" @click="createApiKey">
       {{ $t('common.create') }}
     </el-button>
     <el-table :data="apiKey" class="mb-16" :loading="loading">

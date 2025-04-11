@@ -60,7 +60,7 @@
           <el-button @click.prevent="dialogVisible = false">
             {{ $t('common.cancel') }}
           </el-button>
-          <el-button type="primary" @click="submitHandle">
+          <el-button type="primary" class="custom-btn" @click="submitHandle">
             {{ $t('common.confirm') }}
           </el-button>
         </span>

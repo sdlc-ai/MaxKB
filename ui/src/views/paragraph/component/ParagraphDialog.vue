@@ -23,7 +23,7 @@
         </el-scrollbar>
         <div class="text-right p-24 pt-0" v-if="problemId && isEdit">
           <el-button @click.prevent="cancelEdit"> {{$t('common.cancel')}} </el-button>
-          <el-button type="primary" :disabled="loading" @click="handleDebounceClick">
+          <el-button type="primary" class="custom-btn" :disabled="loading" @click="handleDebounceClick">
             {{$t('common.save')}}
           </el-button>
         </div>

@@ -8,7 +8,7 @@
     :destroy-on-close="true"
     :before-close="close"
   >
-    <el-button type="primary" @click="openAddDrawer()" class="mb-12">
+    <el-button type="primary" @click="openAddDrawer()" class="mb-12 custom-btn">
       {{ $t('views.template.templateForm.title.addParam') }}
     </el-button>
     <el-table :data="modelParamsForm" class="mb-16">
@@ -63,7 +63,7 @@
     <template #footer>
       <span class="dialog-footer">
         <el-button @click="close">{{ $t('common.cancel') }}</el-button>
-        <el-button type="primary" @click="submit" :loading="loading">
+        <el-button type="primary" class="custom-btn" @click="submit" :loading="loading">
           {{ $t('common.save') }}
         </el-button>
       </span>

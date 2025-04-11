@@ -121,7 +121,7 @@
                   <el-button size="small" @click="filterChange('clear')">{{
                     $t('common.clear')
                   }}</el-button>
-                  <el-button type="primary" @click="filterChange" size="small">{{
+                  <el-button type="primary" class="custom-btn" @click="filterChange" size="small">{{
                     $t('common.confirm')
                   }}</el-button>
                 </div>

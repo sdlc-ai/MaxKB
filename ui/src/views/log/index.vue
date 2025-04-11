@@ -120,7 +120,7 @@
                   <el-button size="small" @click="filterChange('clear')">{{
                     $t('common.clear')
                   }}</el-button>
-                  <el-button type="primary" @click="filterChange" size="small">{{
+                  <el-button type="primary" class="custom-btn" @click="filterChange" size="small">{{
                     $t('common.confirm')
                   }}</el-button>
                 </div>
@@ -186,7 +186,7 @@
       <template #footer>
         <div class="dialog-footer" style="margin-top: 16px">
           <el-button @click="dialogVisible = false">{{ $t('common.cancel') }} </el-button>
-          <el-button type="primary" @click="saveCleanTime">
+          <el-button type="primary" class="custom-btn" @click="saveCleanTime">
             {{ $t('common.save') }}
           </el-button>
         </div>
@@ -277,7 +277,7 @@
           <el-button @click.prevent="documentDialogVisible = false">
             {{ $t('common.cancel') }}
           </el-button>
-          <el-button type="primary" @click="submitForm(formRef)" :loading="documentLoading">
+          <el-button type="primary" class="custom-btn" @click="submitForm(formRef)" :loading="documentLoading">
             {{ $t('common.save') }}
           </el-button>
         </span>

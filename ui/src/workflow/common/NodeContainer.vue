@@ -156,7 +156,7 @@
           <el-button @click.prevent="nodeNameDialogVisible = false">
             {{ $t('common.cancel') }}
           </el-button>
-          <el-button type="primary" @click="editName(titleFormRef)">
+          <el-button type="primary" class="custom-btn" @click="editName(titleFormRef)">
             {{ $t('common.save') }}
           </el-button>
         </span>

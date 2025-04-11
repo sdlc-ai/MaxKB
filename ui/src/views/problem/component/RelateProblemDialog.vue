@@ -103,7 +103,7 @@
     <template #footer v-if="isMul">
       <div class="dialog-footer">
         <el-button @click="dialogVisible = false"> {{ $t('common.cancel') }}</el-button>
-        <el-button type="primary" @click="mulAssociation"> {{ $t('common.confirm') }} </el-button>
+        <el-button type="primary" class="custom-btn" @click="mulAssociation"> {{ $t('common.confirm') }} </el-button>
       </div>
     </template>
   </el-dialog>

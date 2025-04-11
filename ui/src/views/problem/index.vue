@@ -4,7 +4,7 @@
       <div class="p-24">
         <div class="flex-between">
           <div>
-            <el-button type="primary" @click="createProblem">{{$t('views.problem.createProblem')}}</el-button>
+            <el-button type="primary" class="custom-btn" @click="createProblem">{{$t('views.problem.createProblem')}}</el-button>
             <el-button @click="relateProblem()" :disabled="multipleSelection.length === 0"
               >{{$t('views.problem.relateParagraph.title')}}</el-button
             >

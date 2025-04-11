@@ -40,7 +40,7 @@
             </div>
           </div>
           <div @click.stop>
-            <el-button type="primary" @click="addInternalFunction(functionDetail)">
+            <el-button type="primary" class="custom-btn" @click="addInternalFunction(functionDetail)">
               {{ $t('common.add') }}
             </el-button>
           </div>

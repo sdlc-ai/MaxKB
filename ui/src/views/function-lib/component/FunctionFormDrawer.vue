@@ -266,7 +266,7 @@
       <div>
         <el-button :loading="loading" @click="visible = false">{{ $t('common.cancel') }}</el-button>
         <el-button :loading="loading" @click="openDebug">{{ $t('common.debug') }}</el-button>
-        <el-button type="primary" @click="submit(FormRef)" :loading="loading">
+        <el-button type="primary" class="custom-btn" @click="submit(FormRef)" :loading="loading">
           {{ isEdit ? $t('common.save') : $t('common.create') }}</el-button
         >
       </div>
