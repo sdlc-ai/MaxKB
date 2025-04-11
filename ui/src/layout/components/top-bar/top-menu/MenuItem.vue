@@ -33,7 +33,7 @@ const isActive = computed(() => {
   cursor: pointer;
   font-size: 16px;
   position: relative;
-
+  padding: 0 12px;
   .icon {
     font-size: 15px;
     margin-right: 5px;
@@ -41,12 +41,13 @@ const isActive = computed(() => {
   }
 
   &:hover {
-    color: var(--el-color-primary);
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(236, 245, 255, 0.2);
   }
 }
 
 .active {
-  color: var(--el-color-primary);
+  color: rgba(255, 255, 255, 1);
 
   &::after {
     position: absolute;
@@ -55,7 +56,6 @@ const isActive = computed(() => {
     height: 2px;
     content: '';
     background-color: var(--el-color-primary-light-9);
-    border-bottom: 3px solid var(--el-color-primary);
   }
 }
 </style>

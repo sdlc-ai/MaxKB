@@ -6,7 +6,8 @@
       </AppAvatar>
       <span class="ml-8">{{ user.userInfo?.username }}</span>
       <el-icon class="el-icon--right">
-        <CaretBottom />
+        <!-- <CaretBottom /> -->
+        <ArrowDownBold />
       </el-icon>
     </div>
 
@@ -136,5 +137,8 @@ onMounted(() => {
       background: var(--app-text-color-light-1);
     }
   }
+}
+.el-dropdown{
+  color: rgba(255, 255, 255, 1);
 }
 </style>

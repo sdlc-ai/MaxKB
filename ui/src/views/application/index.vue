@@ -121,20 +121,24 @@
                     placement="top"
                   >
                     <el-button text @click.stop @click="getAccessToken(item.id)">
-                      <AppIcon iconName="app-view"></AppIcon>
+                      <img class="icon-btn" src="@/assets/icon/app-view.png" alt="">
+                      <!-- <AppIcon iconName="app-view"></AppIcon> -->
                     </el-button>
                   </el-tooltip>
                   <el-divider direction="vertical" />
                   <el-tooltip effect="dark" :content="$t('common.setting')" placement="top">
                     <el-button text @click.stop="settingApplication(item)">
-                      <AppIcon iconName="Setting"></AppIcon>
+                      <!-- <AppIcon iconName="Setting"></AppIcon> -->
+                      <img class="icon-btn" src="@/assets/icon/setting.png" alt="">
+                       <img src="" alt="">
                     </el-button>
                   </el-tooltip>
                   <el-divider direction="vertical" />
                   <span @click.stop>
                     <el-dropdown trigger="click">
                       <el-button text @click.stop>
-                        <el-icon><MoreFilled /></el-icon>
+                        <!-- <el-icon><MoreFilled /></el-icon> -->
+                        <img class="icon-btn" src="@/assets/icon/moreFilled.png" alt="">
                       </el-button>
                       <template #dropdown>
                         <el-dropdown-menu>
