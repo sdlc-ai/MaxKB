@@ -4,8 +4,8 @@
       <AppAvatar>
         <img src="@/assets/user-icon.svg" style="width: 54%" alt="" />
       </AppAvatar>
-      <span class="ml-8">{{ user.userInfo?.username }}</span>
-      <el-icon class="el-icon--right">
+      <span class="ml-8" style="color: white;">{{ user.userInfo?.username }}</span>
+      <el-icon class="el-icon--right" style="color: white;">
         <!-- <CaretBottom /> -->
         <ArrowDownBold />
       </el-icon>
