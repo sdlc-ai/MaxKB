@@ -139,6 +139,6 @@ onMounted(() => {
   }
 }
 .el-dropdown{
-  color: rgba(255, 255, 255, 1);
+  // color: rgba(255, 255, 255, 1);
 }
 </style>
