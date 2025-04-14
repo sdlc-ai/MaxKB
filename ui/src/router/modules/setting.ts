@@ -17,8 +17,8 @@ const settingRouter = {
       path: '/user',
       name: 'user',
       meta: {
-        icon: 'User',
-        iconActive: 'UserFilled',
+        icon: 'ri-user-line',
+        iconActive: 'ri-user-fill',
         title: 'views.user.title',
         activeMenu: '/setting',
         parentPath: '/setting',
@@ -31,8 +31,8 @@ const settingRouter = {
       path: '/team',
       name: 'team',
       meta: {
-        icon: 'app-team',
-        iconActive: 'app-team-active',
+        icon: 'ri-group-line',
+        iconActive: 'ri-group-fill',
         title: 'views.team.title',
         activeMenu: '/setting',
         parentPath: '/setting',
@@ -44,8 +44,8 @@ const settingRouter = {
       path: '/template',
       name: 'template',
       meta: {
-        icon: 'app-template',
-        iconActive: 'app-template-active',
+        icon: 'ri-box-3-line',
+        iconActive: 'ri-box-3-fill',
         title: 'views.template.title',
         activeMenu: '/setting',
         parentPath: '/setting',
@@ -57,8 +57,8 @@ const settingRouter = {
       path: '/system',
       name: 'system',
       meta: {
-        icon: 'app-setting',
-        iconActive: 'app-setting-active',
+        icon: 'ri-settings-4-line',
+        iconActive: 'ri-settings-4-fill',
         title: 'common.setting',
         activeMenu: '/setting',
         parentPath: '/setting',

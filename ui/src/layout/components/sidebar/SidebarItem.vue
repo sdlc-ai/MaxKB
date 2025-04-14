@@ -9,7 +9,8 @@
         <!-- <el-icon>
           <AppIcon v-if="menu.meta && menu.meta.icon" :iconName="menuIcon" class="sidebar-icon" />
         </el-icon> -->
-        <img v-if="menu.meta && menu.meta.icon" class="sidebar-img"  :src="returnImgSrc(menuIcon)" alt="">
+        <!-- <img v-if="menu.meta && menu.meta.icon" class="sidebar-img"  :src="returnImgSrc(menuIcon)" alt=""> -->
+        <i v-if="menu.meta && menu.meta.icon" :class="menuIcon" style="font-size: 20px;margin-right: 5px;"></i>
         <span>{{ $t(menu.meta?.title as string) }}</span>
       </template>
       <sidebar-item
@@ -29,8 +30,9 @@
       @click="clickHandle(menu)"
     >
       <template #title>
+        <i v-if="menu.meta && menu.meta.icon" :class="menuIcon" style="font-size: 20px;margin-right: 5px;"></i>
         <!-- <AppIcon v-if="menu.meta && menu.meta.icon" :iconName="menuIcon" class="sidebar-icon" /> -->
-         <img v-if="menu.meta && menu.meta.icon" class="sidebar-img"  :src="returnImgSrc(menuIcon)" alt="">
+         <!-- <img v-if="menu.meta && menu.meta.icon" class="sidebar-img"  :src="returnImgSrc(menuIcon)" alt=""> -->
         <span v-if="menu.meta && menu.meta.title">{{ $t(menu.meta?.title as string) }}</span>
       </template>
     </el-menu-item>
