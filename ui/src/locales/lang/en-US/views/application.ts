@@ -6,7 +6,8 @@ export default {
   workflow: 'WORKFLOW',
   simple: 'SIMPLE',
   searchBar: {
-    placeholder: 'Search by name'
+    placeholder: 'Search by name',
+    search:'Search'
   },
 
   setting: {

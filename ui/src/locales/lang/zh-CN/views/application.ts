@@ -6,7 +6,8 @@ export default {
   workflow: '高级编排',
   simple: '简单配置',
   searchBar: {
-    placeholder: '按名称搜索'
+    placeholder: '按名称搜索',
+    search:'搜索'
   },
   setting: {
     demo: '演示'

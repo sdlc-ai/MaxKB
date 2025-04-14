@@ -54,7 +54,8 @@
               <img src="@/assets/logo_lark.svg" style="width: 100%" alt="" />
             </AppAvatar>
             <AppAvatar v-else-if="isDataset" class="mr-8 avatar-blue" shape="square" :size="24">
-              <img src="@/assets/icon_document.svg" style="width: 58%" alt="" />
+              <!-- <img src="@/assets/icon_document.svg" style="width: 58%" alt="" /> -->
+              <img src="@/assets/icon/dataset.png" style="width: 24px" alt="" />
             </AppAvatar>
             <auto-tooltip :content="row?.name">
               {{ row?.name }}

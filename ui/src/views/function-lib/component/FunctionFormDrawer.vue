@@ -56,7 +56,8 @@
               </AppAvatar>
             </div>
             <AppAvatar shape="square" style="background: #34c724" class="mr-12" v-else>
-              <img src="@/assets/icon_function_outlined.svg" style="width: 75%" alt="" />
+              <!-- <img src="@/assets/icon_function_outlined.svg" style="width: 75%" alt="" /> -->
+              <img src="@/assets/icon/function-lib.png" style="width: 30px" alt="" />
             </AppAvatar>
             <el-input
               v-model="form.name"

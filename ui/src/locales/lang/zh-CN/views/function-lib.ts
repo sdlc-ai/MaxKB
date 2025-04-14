@@ -7,7 +7,8 @@ export default {
   copyFunction: '复制函数',
   importFunction: '导入函数',
   searchBar: {
-    placeholder: '按函数名称搜索'
+    placeholder: '按函数名称搜索',
+    search:'搜索'
   },
   setting: {
     disabled: '禁用'

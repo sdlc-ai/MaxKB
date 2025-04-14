@@ -9,7 +9,8 @@ export default {
   document_count: '文档数',
   relatedApp_count: '关联应用',
   searchBar: {
-    placeholder: '按名称搜索'
+    placeholder: '按名称搜索',
+    search:'搜索'
   },
   setting: {
     vectorization: '向量化',
