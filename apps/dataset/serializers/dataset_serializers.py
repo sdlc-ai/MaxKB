@@ -411,7 +411,7 @@ class DataSetSerializers(serializers.ModelSerializer):
                                 'embedding_mode_id': instance.get('embedding_mode_id')}
             return self.save(dataset_instance, with_valid=True)
 
-        @valid_license(model=DataSet, count=50,
+        @valid_license(model=DataSet, count=500000,
                        message=_(
                            'The community version supports up to 50 knowledge bases. If you need more knowledge bases, please contact us (https://fit2cloud.com/).'))
         @post(post_function=post_embedding_dataset)
