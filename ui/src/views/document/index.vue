@@ -5,12 +5,13 @@
         <div class="flex-between">
           <div>
             <el-button
-              v-if="datasetDetail.type === '0'"
               type="primary"
+              class="custom-btn"
+              v-if="datasetDetail.type === '0'"
               @click="router.push({ path: '/dataset/upload', query: { id: id } })"
               >{{ $t('views.document.uploadDocument') }}
             </el-button>
-            <el-button v-if="datasetDetail.type === '1'" type="primary" @click="importDoc"
+            <el-button v-if="datasetDetail.type === '1'" type="primary" class="custom-btn"  @click="importDoc"
               >{{ $t('views.document.importDocument') }}
             </el-button>
             <el-button

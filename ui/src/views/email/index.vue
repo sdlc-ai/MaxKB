@@ -57,7 +57,7 @@
           </el-form>
 
           <div class="text-right">
-            <el-button @click="submit(emailFormRef)" type="primary" :disabled="loading">
+            <el-button type="primary" class="custom-btn" @click="submit(emailFormRef)" :disabled="loading">
               {{ $t('common.save') }}
             </el-button>
           </div>
