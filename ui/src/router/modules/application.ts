@@ -25,8 +25,8 @@ const applicationRouter = {
           path: 'overview',
           name: 'AppOverview',
           meta: {
-            icon: 'app-all-menu',
-            iconActive: 'app-all-menu-active',
+            icon: 'ri-pie-chart-2-line',
+            iconActive: 'ri-pie-chart-2-fill',
             title: 'views.applicationOverview.title',
             active: 'overview',
             parentPath: '/application/:id/:type',
@@ -38,8 +38,8 @@ const applicationRouter = {
           path: 'setting',
           name: 'AppSetting',
           meta: {
-            icon: 'app-setting',
-            iconActive: 'app-setting-active',
+            icon: 'ri-settings-4-line',
+            iconActive: 'ri-settings-4-fill',
             title: 'common.setting',
             active: 'setting',
             parentPath: '/application/:id/:type',
@@ -65,7 +65,8 @@ const applicationRouter = {
           path: 'hit-test',
           name: 'AppHitTest',
           meta: {
-            icon: 'app-hit-test',
+            icon: 'ri-focus-2-line',
+            iconActive: 'ri-focus-2-fill',
             title: 'views.application.hitTest.title',
             active: 'hit-test',
             parentPath: '/application/:id/:type',
@@ -77,8 +78,8 @@ const applicationRouter = {
           path: 'log',
           name: 'Log',
           meta: {
-            icon: 'app-document',
-            iconActive: 'app-document-active',
+            icon: 'ri-message-2-line',
+            iconActive: 'ri-message-2-fill',
             title: 'views.log.title',
             active: 'log',
             parentPath: '/application/:id/:type',

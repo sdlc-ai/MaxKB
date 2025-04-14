@@ -30,8 +30,8 @@ const datasetRouter = {
           path: 'document',
           name: 'Document',
           meta: {
-            icon: 'app-document',
-            iconActive: 'app-document-active',
+            icon: 'ri-folder-open-line',
+            iconActive: 'ri-folder-open-fill',
             title: 'common.fileUpload.document',
             active: 'document',
             parentPath: '/dataset/:id',
@@ -43,8 +43,8 @@ const datasetRouter = {
           path: 'problem',
           name: 'Problem',
           meta: {
-            icon: 'app-problems',
-            iconActive: 'QuestionFilled',
+            icon: 'ri-question-line',
+            iconActive: 'ri-question-fill',
             title: 'views.problem.title',
             active: 'problem',
             parentPath: '/dataset/:id',
@@ -56,7 +56,8 @@ const datasetRouter = {
           path: 'hit-test',
           name: 'DatasetHitTest',
           meta: {
-            icon: 'app-hit-test',
+            icon: 'ri-focus-2-line',
+            iconActive: 'ri-focus-2-fill',
             title: 'views.application.hitTest.title',
             active: 'hit-test',
             parentPath: '/dataset/:id',
@@ -68,8 +69,8 @@ const datasetRouter = {
           path: 'setting',
           name: 'DatasetSetting',
           meta: {
-            icon: 'app-setting',
-            iconActive: 'app-setting-active',
+            icon: 'ri-settings-4-line',
+            iconActive: 'ri-settings-4-fill',
             title: 'common.setting',
             active: 'setting',
             parentPath: '/dataset/:id',
