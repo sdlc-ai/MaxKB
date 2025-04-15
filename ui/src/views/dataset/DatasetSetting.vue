@@ -19,7 +19,8 @@
               <el-card shadow="never" class="mb-8" style="width: 50%" v-if="detail.type === '0'">
                 <div class="flex align-center">
                   <AppAvatar class="mr-8 avatar-blue" shape="square" :size="32">
-                    <img src="@/assets/icon_document.svg" style="width: 58%" alt="" />
+                    <!-- <img src="@/assets/icon_document.svg" style="width: 58%" alt="" /> -->
+                    <img style="width: 32px;height: 32px;" src="@/assets/icon/dataset.png" alt="">
                   </AppAvatar>
                   <div>
                     <div>{{ $t('views.dataset.general') }}</div>
@@ -146,7 +147,7 @@
           </div>
 
           <div class="text-right">
-            <el-button @click="submit" type="primary"> {{ $t('common.save') }}</el-button>
+            <el-button type="primary" @click="submit" class="custom-btn"> {{ $t('common.save') }}</el-button>
           </div>
         </div>
       </el-scrollbar>

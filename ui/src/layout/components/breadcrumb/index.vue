@@ -49,7 +49,7 @@
           <!-- <AppAvatar v-else class="mr-8 avatar-blue" shape="square" :size="24">
           </AppAvatar> -->
             <!-- <img src="@/assets/icon_document.svg" style="width: 58%" alt="" /> -->
-          <img style="margin-right: 5px;width: 26px;height: 26px;" src="@/assets/icon/dataset.png" alt="">
+          <img v-else  style="margin-right: 5px;width: 26px;height: 26px;" src="@/assets/icon/dataset.png" alt="">
 
           <div class="ellipsis" :title="current?.name">{{ current?.name }}</div>
         </div>
