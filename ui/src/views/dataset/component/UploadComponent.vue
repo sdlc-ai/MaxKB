@@ -143,7 +143,7 @@
         action="#"
         :auto-upload="false"
         :show-file-list="false"
-        accept=".txt, .md, .log, .docx, .pdf, .html,.zip,.xlsx,.xls,.csv"
+        accept=".txt, .md, .log, .docx, .pdf, .html, .zip, .xlsx,.xls, .csv, .png, .jpg"
         :limit="50"
         :on-exceed="onExceed"
         :on-change="fileHandleChange"
@@ -164,7 +164,7 @@
             <p>
               {{
                 $t('views.document.upload.formats')
-              }}TXT、Markdown、PDF、DOCX、HTML、XLS、XLSX、CSV、ZIP
+              }}TXT、Markdown、PDF、DOCX、HTML、XLS、XLSX、CSV、ZIP、PNG、JPG
             </p>
           </div>
         </div>
@@ -255,6 +255,8 @@ const fileHandleChange = (file: any, fileList: UploadFiles) => {
   }
 
   if (!isRightType(file?.name, form.value.fileType)) {
+    console.log(file?.name);
+    console.log(form.value.fileType);
     if (file?.name !== '.DS_Store') {
       MsgError(t('views.document.upload.errorMessage2'))
     }

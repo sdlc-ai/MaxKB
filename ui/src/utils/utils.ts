@@ -40,7 +40,7 @@ export function fileType(name: string) {
   获得文件对应图片
 */
 const typeList: any = {
-  txt: ['txt', 'pdf', 'docx', 'md', 'html', 'zip', 'xlsx', 'xls', 'csv'],
+  txt: ['txt', 'pdf', 'docx', 'md', 'html', 'zip', 'xlsx', 'xls', 'csv', 'png', 'jpg'],
   table: ['xlsx', 'xls', 'csv'],
   QA: ['xlsx', 'csv', 'xls', 'zip']
 }
