@@ -29,7 +29,7 @@
                 <div class="flex-between">
                   <div class="flex align-center">
                     <AppAvatar class="mr-8 avatar-blue" shape="square" :size="32">
-                      <img src="@/assets/icon_document.svg" style="width: 58%" alt="" />
+                      <img src="@/assets/icon/dataset.png"  alt="" />
                     </AppAvatar>
                     <div>
                       <p>

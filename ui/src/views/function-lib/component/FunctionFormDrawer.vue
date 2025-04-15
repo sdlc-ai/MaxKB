@@ -38,12 +38,11 @@
               </AppAvatar>
               <AppAvatar
                 v-else-if="form.name"
-                :id="form.id"
-                :name="form.name"
-                pinyinColor
                 shape="square"
                 :size="32"
-              />
+              >
+              <img src="@/assets/icon/function-lib.png" alt="" />
+            </AppAvatar>
               <AppAvatar
                 v-if="showEditIcon"
                 :id="form.id"

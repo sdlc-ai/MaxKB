@@ -83,8 +83,7 @@
               @click="router.push({ path: `/application/${item.id}/${item.type}/overview` })"
             >
               <template #icon>
-                <img style="margin-right: 8px;width: 36px;height: 36px;" src="@/assets/icon/application.png" alt="">
-                <!-- <AppAvatar
+                <AppAvatar
                   v-if="isAppIcon(item?.icon)"
                   shape="square"
                   :size="32"
@@ -95,12 +94,12 @@
                 </AppAvatar>
                 <AppAvatar
                   v-else-if="item?.name"
-                  :name="item?.name"
-                  pinyinColor
                   shape="square"
                   :size="32"
                   class="mr-8"
-                /> -->
+                >
+                <img src="@/assets/icon/application.png" alt="">
+              </AppAvatar>
               </template>
               <template #subTitle>
                 <el-text class="color-secondary" size="small">

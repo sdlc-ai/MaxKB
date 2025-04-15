@@ -11,12 +11,12 @@
         <p>{{ $t('views.applicationOverview.appInfo.EditAvatarDialog.default') }}</p>
         <AppAvatar
           v-if="detail?.name"
-          :name="detail?.name"
-          pinyinColor
           class="mt-8 mb-8"
           shape="square"
           :size="32"
-        />
+        >
+        <img src="@/assets/icon/function-lib.png" alt="" />
+      </AppAvatar>
       </el-radio>
 
       <el-radio value="custom">
