@@ -182,7 +182,8 @@ function back() {
       confirmButtonText: t('views.applicationWorkflow.setting.exitSave'),
       cancelButtonText: t('views.applicationWorkflow.setting.exit'),
       type: 'warning',
-      distinguishCancelAndClose: true
+      distinguishCancelAndClose: true,
+      confirmButtonClass:'custom-btn'
     })
       .then(() => {
         saveApplication(true, true)

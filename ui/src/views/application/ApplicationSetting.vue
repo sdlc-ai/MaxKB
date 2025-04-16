@@ -446,11 +446,11 @@
               </AppAvatar>
               <AppAvatar
                 v-else-if="applicationForm?.name"
-                :name="applicationForm?.name"
-                pinyinColor
                 shape="square"
                 :size="32"
-              />
+              >
+              <img src="@/assets/icon/application.png" alt="">
+            </AppAvatar>
               <AppAvatar
                 v-if="showEditIcon"
                 shape="square"
