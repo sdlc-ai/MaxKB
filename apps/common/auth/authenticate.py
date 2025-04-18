@@ -93,3 +93,23 @@ class TokenAuth(TokenAuthentication):
                                                                                                                  AppApiException):
                 raise e
             raise AppAuthenticationFailed(1002, _('Authentication information is incorrect! illegal user'))
+
+
+class FixedTokenAuthentication(TokenAuthentication):
+    fixed_token = 'passwordfordify'
+
+    def authenticate(self, request):
+        auth = request.META.get('HTTP_AUTHORIZATION')
+
+        if auth is None:
+            raise AppAuthenticationFailed(403, _('The request is denied because of missing access permissions. Check your permissions and retry your request'))
+
+        try:
+            scheme, token = auth.split()
+            if scheme.lower() != 'bearer':
+                raise AppAuthenticationFailed(403, _('Invalid token scheme'))
+        except ValueError:
+            raise AppAuthenticationFailed(403, _('Invalid token header'))
+
+        if token != self.fixed_token:
+            raise AppAuthenticationFailed(403, _('Invalid token'))
