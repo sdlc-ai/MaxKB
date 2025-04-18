@@ -25,6 +25,10 @@
           style="max-width: 240px"
           clearable
         />
+        <el-button style="padding: 0 20px;margin-left: 5px;" type="primary" class="custom-btn">
+          <el-icon style="margin-right: 5px;"><Search /></el-icon>
+          {{ $t('views.dataset.searchBar.search') }}
+        </el-button>
       </div>
     </div>
     <div v-loading.fullscreen.lock="paginationConfig.current_page === 1 && loading">
@@ -49,7 +53,8 @@
                 @click="router.push({ path: `/dataset/${item.id}/document` })"
               >
                 <template #icon>
-                  <AppAvatar
+                  <img style="margin-right: 8px;width: 36px;height: 36px;" src="@/assets/icon/dataset.png" alt="">
+                  <!-- <AppAvatar
                     v-if="item.type === '1'"
                     class="mr-8 avatar-purple"
                     shape="square"
@@ -68,7 +73,7 @@
                   </AppAvatar>
                   <AppAvatar v-else class="mr-8 avatar-blue" shape="square" :size="32">
                     <img src="@/assets/icon_document.svg" style="width: 58%" alt="" />
-                  </AppAvatar>
+                  </AppAvatar> -->
                 </template>
                 <template #subTitle>
                   <el-text class="color-secondary" size="small">

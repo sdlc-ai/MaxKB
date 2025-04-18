@@ -22,11 +22,11 @@
               </AppAvatar>
               <AppAvatar
                 v-else-if="detail?.name"
-                :name="detail?.name"
-                pinyinColor
                 shape="square"
                 :size="32"
-              />
+              >
+              <img src="@/assets/icon/application.png" alt="" />
+            </AppAvatar>
               <AppAvatar
                 v-if="showEditIcon"
                 shape="square"
@@ -86,6 +86,7 @@
                   tag="a"
                   :href="shareUrl"
                   target="_blank"
+                  class="custom-btn"
                 >
                   {{ $t('views.applicationOverview.appInfo.demo') }}
                 </el-button>

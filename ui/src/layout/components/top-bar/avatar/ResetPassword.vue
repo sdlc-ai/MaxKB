@@ -75,7 +75,7 @@
     <template #footer>
       <div class="dialog-footer">
         <el-button @click="resetPasswordDialog = false">{{ $t('common.cancel') }}</el-button>
-        <el-button type="primary" @click="resetPassword">
+        <el-button type="primary" class="custom-btn" @click="resetPassword">
           {{ $t('common.save') }}
         </el-button>
       </div>

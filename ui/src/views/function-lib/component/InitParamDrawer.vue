@@ -26,7 +26,7 @@
     </div>
     <template #footer>
       <div>
-        <el-button type="primary" @click="submit()" :loading="loading">
+        <el-button type="primary" class="custom-btn" @click="submit()" :loading="loading">
           {{ $t('common.save') }}
         </el-button
         >

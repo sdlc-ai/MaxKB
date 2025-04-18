@@ -6,9 +6,11 @@
       popper-class="sidebar-container-popper"
     >
       <template #title>
-        <el-icon>
+        <!-- <el-icon>
           <AppIcon v-if="menu.meta && menu.meta.icon" :iconName="menuIcon" class="sidebar-icon" />
-        </el-icon>
+        </el-icon> -->
+        <!-- <img v-if="menu.meta && menu.meta.icon" class="sidebar-img"  :src="returnImgSrc(menuIcon)" alt=""> -->
+        <i v-if="menu.meta && menu.meta.icon" :class="menuIcon" style="font-size: 20px;margin-right: 5px;"></i>
         <span>{{ $t(menu.meta?.title as string) }}</span>
       </template>
       <sidebar-item
@@ -28,7 +30,9 @@
       @click="clickHandle(menu)"
     >
       <template #title>
-        <AppIcon v-if="menu.meta && menu.meta.icon" :iconName="menuIcon" class="sidebar-icon" />
+        <i v-if="menu.meta && menu.meta.icon" :class="menuIcon" style="font-size: 20px;margin-right: 5px;"></i>
+        <!-- <AppIcon v-if="menu.meta && menu.meta.icon" :iconName="menuIcon" class="sidebar-icon" /> -->
+         <!-- <img v-if="menu.meta && menu.meta.icon" class="sidebar-img"  :src="returnImgSrc(menuIcon)" alt=""> -->
         <span v-if="menu.meta && menu.meta.title">{{ $t(menu.meta?.title as string) }}</span>
       </template>
     </el-menu-item>
@@ -77,6 +81,11 @@ const menuIcon = computed(() => {
   .sidebar-icon {
     font-size: 20px;
     margin-top: -2px;
+  }
+  .sidebar-img{
+    width: 22px;
+    height: 22px;
+    margin-right: 5px;
   }
   .el-menu-item {
     padding: 13px 12px 13px 16px !important;

@@ -30,5 +30,6 @@ const isDefaultTheme = computed(() => {
   left: 0;
   top: 0;
   z-index: 100;
+  color: rgba(236, 245, 255, 1);
 }
 </style>

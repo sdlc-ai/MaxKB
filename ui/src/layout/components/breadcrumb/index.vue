@@ -19,14 +19,15 @@
           >
             <img :src="current?.icon" alt="" />
           </AppAvatar>
-          <AppAvatar
+          <img v-else-if="isApplication" style="margin-right: 5px;width: 26px;height: 26px;" src="@/assets/icon/application.png" alt="">
+          <!-- <AppAvatar
             v-else-if="isApplication"
             :name="current?.name"
             pinyinColor
             shape="square"
             class="mr-8"
             :size="24"
-          />
+          /> -->
 
           <AppAvatar
             v-else-if="isDataset && current?.type === '1'"
@@ -45,9 +46,11 @@
           >
             <img src="@/assets/logo_lark.svg" style="width: 100%" alt="" />
           </AppAvatar>
-          <AppAvatar v-else class="mr-8 avatar-blue" shape="square" :size="24">
-            <img src="@/assets/icon_document.svg" style="width: 58%" alt="" />
-          </AppAvatar>
+          <!-- <AppAvatar v-else class="mr-8 avatar-blue" shape="square" :size="24">
+          </AppAvatar> -->
+            <!-- <img src="@/assets/icon_document.svg" style="width: 58%" alt="" /> -->
+          <img v-else  style="margin-right: 5px;width: 26px;height: 26px;" src="@/assets/icon/dataset.png" alt="">
+
           <div class="ellipsis" :title="current?.name">{{ current?.name }}</div>
         </div>
 
@@ -73,14 +76,15 @@
                         <img :src="item?.icon" alt="" />
                       </AppAvatar>
 
-                      <AppAvatar
+                      <!-- <AppAvatar
                         v-else-if="isApplication"
                         :name="item.name"
                         pinyinColor
                         class="mr-12"
                         shape="square"
                         :size="24"
-                      />
+                      /> -->
+                      <img v-else-if="isApplication" style="margin-right: 5px;width: 26px;height: 26px;" src="@/assets/icon/application.png" alt="">
                       <AppAvatar
                         v-else-if="isDataset && item.type === '1'"
                         class="mr-12 avatar-purple"
@@ -99,7 +103,8 @@
                         <img src="@/assets/logo_lark.svg" style="width: 100%" alt="" />
                       </AppAvatar>
                       <AppAvatar v-else class="mr-12 avatar-blue" shape="square" :size="24">
-                        <img src="@/assets/icon_document.svg" style="width: 58%" alt="" />
+                        <!-- <img src="@/assets/icon_document.svg" style="width: 58%" alt="" /> -->
+                        <img style="margin-right: 5px;width: 26px;height: 26px;" src="@/assets/icon/dataset.png" alt="">
                       </AppAvatar>
                       <span class="ellipsis" :title="item?.name"> {{ item?.name }}</span>
                     </div>

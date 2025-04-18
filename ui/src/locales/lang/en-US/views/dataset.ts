@@ -8,7 +8,8 @@ export default {
   document_count: 'docs',
   relatedApp_count: 'linked apps',
   searchBar: {
-    placeholder: 'Search by name'
+    placeholder: 'Search by name',
+    search:'Search'
   },
   setting: {
     vectorization: 'Vectorization',

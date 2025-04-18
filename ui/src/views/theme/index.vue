@@ -247,7 +247,7 @@
     </el-scrollbar>
     <div class="theme-setting__operate w-full p-16-24">
       <el-button @click="resetTheme">{{ $t('views.system.theme.abandonUpdate') }}</el-button>
-      <el-button type="primary" @click="updateTheme(themeFormRef)">
+      <el-button type="primary" class="custom-btn" @click="updateTheme(themeFormRef)">
         {{ $t('views.system.theme.saveAndApply') }}</el-button
       >
     </div>

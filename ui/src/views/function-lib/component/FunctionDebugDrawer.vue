@@ -69,7 +69,7 @@
         </el-card>
       </div>
 
-      <el-button type="primary" @click="submit(FormRef)" :loading="loading">
+      <el-button type="primary" class="custom-btn" @click="submit(FormRef)" :loading="loading">
         {{ $t('views.functionLib.functionForm.form.debug.run') }}
       </el-button>
       <div v-if="showResult" class="mt-8">

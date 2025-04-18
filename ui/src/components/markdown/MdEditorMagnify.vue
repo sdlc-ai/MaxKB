@@ -18,7 +18,7 @@
     <MdEditor v-model="cloneContent" :preview="false" :toolbars="[]" :footers="[]"></MdEditor>
     <template #footer>
       <div class="dialog-footer mt-24">
-        <el-button type="primary" @click="submitDialog"> {{ $t('common.confirm') }}</el-button>
+        <el-button type="primary" class="custom-btn" @click="submitDialog"> {{ $t('common.confirm') }}</el-button>
       </div>
     </template>
   </el-dialog>

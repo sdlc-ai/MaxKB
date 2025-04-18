@@ -38,7 +38,7 @@
         <el-button @click.prevent="dialogVisible = false" :loading="loading">
           {{ $t('common.cancel') }}
         </el-button>
-        <el-button type="primary" @click="submitValid(applicationFormRef)" :loading="loading">
+        <el-button type="primary" class="custom-btn" @click="submitValid(applicationFormRef)" :loading="loading">
           {{ $t('common.copy') }}
         </el-button>
       </span>

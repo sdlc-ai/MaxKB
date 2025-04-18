@@ -22,7 +22,7 @@
     <template #footer>
       <span class="dialog-footer">
         <el-button @click.prevent="close"> {{ $t('common.cancel') }} </el-button>
-        <el-button type="primary" @click="submit()" :loading="loading">
+        <el-button type="primary" class="custom-btn" @click="submit()" :loading="loading">
           {{ isEdit ? $t('common.save') : $t('common.add') }}
         </el-button>
       </span>

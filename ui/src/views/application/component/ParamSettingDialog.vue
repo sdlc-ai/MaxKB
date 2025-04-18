@@ -185,7 +185,7 @@
     <template #footer>
       <span class="dialog-footer p-16">
         <el-button @click.prevent="dialogVisible = false">{{ $t('common.cancel') }}</el-button>
-        <el-button type="primary" @click="submit(noReferencesformRef)" :loading="loading">
+        <el-button type="primary" class="custom-btn" @click="submit(noReferencesformRef)" :loading="loading">
           {{ $t('common.save') }}
         </el-button>
       </span>

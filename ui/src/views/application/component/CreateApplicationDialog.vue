@@ -95,7 +95,7 @@
         <el-button @click.prevent="dialogVisible = false" :loading="loading">
           {{ $t('common.cancel') }}
         </el-button>
-        <el-button type="primary" @click="submitHandle(applicationFormRef)" :loading="loading">
+        <el-button type="primary" class="custom-btn" @click="submitHandle(applicationFormRef)" :loading="loading">
           {{ $t('common.create') }}
         </el-button>
       </span>

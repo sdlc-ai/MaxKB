@@ -1,19 +1,19 @@
 :root {
   --app-base-px: 8px;
-  --app-layout-bg-color: #f5f6f7;
+  --app-layout-bg-color: #fafbff;
   --app-text-color: #1f2329;
-  --app-text-color-light-1: rgba(31, 35, 41, 0.1);
+  --app-text-color-light-1: #e9f6ff;
   --app-text-color-secondary: #646a73;
   --app-text-color-disable: #bbbfc4;
   --app-input-color-placeholder: #8f959e;
   --app-view-padding: 24px;
   --app-view-bg-color: #ffffff;
   --app-border-color-dark: #bbbfc4;
-  --md-bk-hover-color:var(--el-border-color-hover);
+  --md-bk-hover-color: var(--el-border-color-hover);
   /** header 组件 */
   --app-header-height: 56px;
   --app-header-padding: 0 20px;
-  --app-header-bg-color: linear-gradient(90deg, #ebf1ff 24.34%, #e5fbf8 56.18%, #f2ebfe 90.18%);
+  --app-header-bg-color: linear-gradient(90deg, rgba(18, 171, 219, 1) 0%, rgba(16, 116, 163, 1) 100%);
   --app-logo-color: linear-gradient(180deg, #3370FF 0%, #7f3bf5 100%);
   --app-avatar-gradient-color: linear-gradient(270deg, #9258f7 0%, #3370FF 100%);
 

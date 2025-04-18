@@ -14,7 +14,7 @@
     <template #footer>
       <div class="dialog-footer">
         <el-button @click="close">{{ $t('common.cancel') }} </el-button>
-        <el-button type="primary" @click="submit"> {{ $t('common.submit') }} </el-button>
+        <el-button type="primary" class="custom-btn" @click="submit"> {{ $t('common.submit') }} </el-button>
       </div>
     </template>
   </el-dialog>

@@ -184,7 +184,7 @@
 
         <div class="text-right">
           <el-button @click="popoverVisible = false">{{ $t('common.cancel') }}</el-button>
-          <el-button type="primary" @click="settingChange('close')">{{
+          <el-button type="primary" class="custom-btn" @click="settingChange('close')">{{
             $t('common.confirm')
           }}</el-button>
         </div>

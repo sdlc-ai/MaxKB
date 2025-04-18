@@ -25,6 +25,10 @@
           style="min-width: 240px"
           clearable
         />
+        <el-button style="padding: 0 20px;margin-left: 5px;" type="primary" class="custom-btn">
+          <el-icon style="margin-right: 5px;"><Search /></el-icon>
+          {{ $t('views.application.searchBar.search') }}
+        </el-button>
       </div>
     </div>
     <div v-loading.fullscreen.lock="paginationConfig.current_page === 1 && loading">
@@ -90,12 +94,12 @@
                 </AppAvatar>
                 <AppAvatar
                   v-else-if="item?.name"
-                  :name="item?.name"
-                  pinyinColor
                   shape="square"
                   :size="32"
                   class="mr-8"
-                />
+                >
+                <img src="@/assets/icon/application.png" alt="">
+              </AppAvatar>
               </template>
               <template #subTitle>
                 <el-text class="color-secondary" size="small">
@@ -121,20 +125,24 @@
                     placement="top"
                   >
                     <el-button text @click.stop @click="getAccessToken(item.id)">
-                      <AppIcon iconName="app-view"></AppIcon>
+                      <img class="icon-btn" src="@/assets/icon/app-view.png" alt="">
+                      <!-- <AppIcon iconName="app-view"></AppIcon> -->
                     </el-button>
                   </el-tooltip>
                   <el-divider direction="vertical" />
                   <el-tooltip effect="dark" :content="$t('common.setting')" placement="top">
                     <el-button text @click.stop="settingApplication(item)">
-                      <AppIcon iconName="Setting"></AppIcon>
+                      <!-- <AppIcon iconName="Setting"></AppIcon> -->
+                      <img class="icon-btn" src="@/assets/icon/setting.png" alt="">
+                       <img src="" alt="">
                     </el-button>
                   </el-tooltip>
                   <el-divider direction="vertical" />
                   <span @click.stop>
                     <el-dropdown trigger="click">
                       <el-button text @click.stop>
-                        <el-icon><MoreFilled /></el-icon>
+                        <!-- <el-icon><MoreFilled /></el-icon> -->
+                        <img class="icon-btn" src="@/assets/icon/moreFilled.png" alt="">
                       </el-button>
                       <template #dropdown>
                         <el-dropdown-menu>

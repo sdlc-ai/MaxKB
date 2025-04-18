@@ -7,7 +7,8 @@ export default {
   copyFunction: 'Copy Function',
   importFunction: 'Import Function',
   searchBar: {
-    placeholder: 'Search by function name'
+    placeholder: 'Search by function name',
+    search:'Search'
   },
   setting: {
     disabled: 'Disabled'

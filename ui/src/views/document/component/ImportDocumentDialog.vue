@@ -84,7 +84,7 @@
     <template #footer>
       <span class="dialog-footer">
         <el-button @click.prevent="dialogVisible = false"> {{ $t('common.cancel') }} </el-button>
-        <el-button type="primary" @click="submit(webFormRef)" :loading="loading">
+        <el-button type="primary" class="custom-btn" @click="submit(webFormRef)" :loading="loading">
           {{ $t('common.confirm') }}
         </el-button>
       </span>

@@ -90,7 +90,7 @@
     <template #footer>
       <div>
         <el-button @click="closeDrawer">{{ $t('common.cancel') }}</el-button>
-        <el-button type="primary" @click="submit" :disabled="loading">
+        <el-button type="primary" class="custom-btn" @click="submit" :disabled="loading">
           {{ $t('common.save') }}
         </el-button>
       </div>

@@ -30,6 +30,10 @@
           style="max-width: 240px"
           clearable
         />
+        <el-button style="padding: 0 20px;margin-left: 5px;" type="primary" class="custom-btn">
+          <el-icon style="margin-right: 5px;"><Search /></el-icon>
+          {{ $t('views.functionLib.searchBar.search') }}
+        </el-button>
       </div>
     </div>
     <div
@@ -108,12 +112,12 @@
                 </AppAvatar>
                 <AppAvatar
                   v-else-if="item?.name"
-                  :name="item?.name"
-                  pinyinColor
                   shape="square"
                   :size="32"
                   class="mr-8"
-                />
+                >
+                <img src="@/assets/icon/function-lib.png" alt="">
+              </AppAvatar>
               </template>
               <template #subTitle>
                 <el-text class="color-secondary" size="small">

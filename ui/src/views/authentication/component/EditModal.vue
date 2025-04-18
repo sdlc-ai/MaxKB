@@ -43,7 +43,7 @@ template
         <el-button @click="validateConnection">{{
           $t('views.system.authentication.scanTheQRCode.validate')
         }}</el-button>
-        <el-button type="primary" @click="validateForm">{{ $t('common.save') }}</el-button>
+        <el-button type="primary" class="custom-btn" @click="validateForm">{{ $t('common.save') }}</el-button>
       </span>
     </template>
   </el-drawer>

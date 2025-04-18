@@ -36,7 +36,7 @@
           </div>
         </el-form>
 
-        <el-button size="large" type="primary" class="w-full" @click="login"
+        <el-button size="large" type="primary" class="w-full custom-btn" @click="login"
           >{{ $t('views.login.buttons.login') }}
         </el-button>
         <div class="operate-container flex-between mt-12">

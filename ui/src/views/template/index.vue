@@ -79,7 +79,7 @@
         <div class="p-24 pb-0">
           <h4>{{ active_provider?.name }}</h4>
           <div class="flex-between mt-16 mb-16">
-            <el-button type="primary" @click="openCreateModel(active_provider)">
+            <el-button type="primary" class="custom-btn" @click="openCreateModel(active_provider)">
               {{ $t('views.template.addModel') }}</el-button
             >
             <div class="flex-between complex-search">

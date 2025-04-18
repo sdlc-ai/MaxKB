@@ -16,7 +16,7 @@
         >
       </div>
       <div v-if="showHistory && disablePublic">
-        <el-button type="primary" class="mr-8" @click="refreshVersion()">
+        <el-button type="primary" class="mr-8 custom-btn" @click="refreshVersion()">
           {{ $t('views.applicationWorkflow.setting.restoreVersion') }}
         </el-button>
         <el-divider direction="vertical" />
@@ -36,7 +36,7 @@
           <AppIcon iconName="app-save-outlined" class="mr-4"></AppIcon>
           {{ $t('common.save') }}
         </el-button>
-        <el-button type="primary" @click="publicHandle">
+        <el-button type="primary" class="custom-btn" @click="publicHandle">
           {{ $t('views.applicationWorkflow.setting.public') }}
         </el-button>
 
@@ -182,7 +182,8 @@ function back() {
       confirmButtonText: t('views.applicationWorkflow.setting.exitSave'),
       cancelButtonText: t('views.applicationWorkflow.setting.exit'),
       type: 'warning',
-      distinguishCancelAndClose: true
+      distinguishCancelAndClose: true,
+      confirmButtonClass:'custom-btn'
     })
       .then(() => {
         saveApplication(true, true)

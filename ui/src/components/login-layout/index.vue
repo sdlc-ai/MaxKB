@@ -79,7 +79,7 @@ const loginImage = computed(() => {
   if (user.themeInfo?.loginImage) {
     return `${fileURL.value}`
   } else {
-    return new URL(`../../assets/theme/${getThemeImg(user.themeInfo?.theme)}.jpg`, import.meta.url)
+    return new URL(`../../assets/theme/${getThemeImg(user.themeInfo?.theme)}.png`, import.meta.url)
       .href
   }
 })

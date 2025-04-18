@@ -2,7 +2,7 @@
   <LayoutContainer :header="$t('views.user.title')">
     <div class="p-24">
       <div class="flex-between">
-        <el-button type="primary" @click="createUser">{{ $t('views.user.createUser') }}</el-button>
+        <el-button type="primary" class="custom-btn" @click="createUser">{{ $t('views.user.createUser') }}</el-button>
         <el-input
           v-model="searchValue"
           @change="searchHandle"

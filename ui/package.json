@@ -43,6 +43,7 @@
     "pinia": "^2.1.6",
     "pinyin-pro": "^3.18.2",
     "recorder-core": "^1.3.24040900",
+    "remixicon": "^4.6.0",
     "screenfull": "^6.0.2",
     "sortablejs": "^1.15.6",
     "use-element-plus-theme": "^0.0.5",

@@ -5,7 +5,7 @@
         <h3>
           {{ $t('common.setting') }}
         </h3>
-        <el-button type="primary" @click="submit(applicationFormRef)" :disabled="loading">
+        <el-button type="primary" class="custom-btn" @click="submit(applicationFormRef)" :disabled="loading">
           {{ $t('views.application.applicationForm.buttons.publish') }}
         </el-button>
       </div>
@@ -446,11 +446,11 @@
               </AppAvatar>
               <AppAvatar
                 v-else-if="applicationForm?.name"
-                :name="applicationForm?.name"
-                pinyinColor
                 shape="square"
                 :size="32"
-              />
+              >
+              <img src="@/assets/icon/application.png" alt="">
+            </AppAvatar>
               <AppAvatar
                 v-if="showEditIcon"
                 shape="square"

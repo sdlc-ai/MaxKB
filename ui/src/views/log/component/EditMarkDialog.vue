@@ -52,7 +52,7 @@
     <template #footer>
       <span class="dialog-footer" v-if="isEdit">
         <el-button @click.prevent="isEdit = false"> {{ $t('common.cancel') }} </el-button>
-        <el-button type="primary" @click="submit(formRef)" :loading="loading">
+        <el-button type="primary" class="custom-btn" @click="submit(formRef)" :loading="loading">
           {{ $t('common.save') }}
         </el-button>
       </span>

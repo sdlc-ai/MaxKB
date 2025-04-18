@@ -38,12 +38,11 @@
               </AppAvatar>
               <AppAvatar
                 v-else-if="form.name"
-                :id="form.id"
-                :name="form.name"
-                pinyinColor
                 shape="square"
                 :size="32"
-              />
+              >
+              <img src="@/assets/icon/function-lib.png" alt="" />
+            </AppAvatar>
               <AppAvatar
                 v-if="showEditIcon"
                 :id="form.id"
@@ -56,7 +55,8 @@
               </AppAvatar>
             </div>
             <AppAvatar shape="square" style="background: #34c724" class="mr-12" v-else>
-              <img src="@/assets/icon_function_outlined.svg" style="width: 75%" alt="" />
+              <!-- <img src="@/assets/icon_function_outlined.svg" style="width: 75%" alt="" /> -->
+              <img src="@/assets/icon/function-lib.png" style="width: 30px" alt="" />
             </AppAvatar>
             <el-input
               v-model="form.name"
@@ -266,7 +266,7 @@
       <div>
         <el-button :loading="loading" @click="visible = false">{{ $t('common.cancel') }}</el-button>
         <el-button :loading="loading" @click="openDebug">{{ $t('common.debug') }}</el-button>
-        <el-button type="primary" @click="submit(FormRef)" :loading="loading">
+        <el-button type="primary" class="custom-btn" @click="submit(FormRef)" :loading="loading">
           {{ isEdit ? $t('common.save') : $t('common.create') }}</el-button
         >
       </div>
