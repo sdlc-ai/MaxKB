@@ -17,7 +17,7 @@ urlpatterns = [
     path('dataset/<int:current_page>/<int:page_size>', views.Dataset.Page.as_view(), name="dataset"),
     path('dataset/<str:dataset_id>/sync_web', views.Dataset.SyncWeb.as_view()),
     path('dataset/<str:dataset_id>/hit_test', views.Dataset.HitTest.as_view()),
-    path('dataset/retrieval', views.Dataset.DatasetCall.as_view(), name="application/retrieval"),
+    # path('dataset/retrieval', views.Dataset.DatasetCall.as_view(), name="application/retrieval"),
     path('dataset/<str:dataset_id>/document', views.Document.as_view(), name='document'),
     path('dataset/<str:dataset_id>/model', views.Dataset.Model.as_view()),
     path('dataset/document/template/export', views.Template.as_view()),
