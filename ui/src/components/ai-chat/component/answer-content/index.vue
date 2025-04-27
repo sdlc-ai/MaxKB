@@ -2,8 +2,9 @@
   <div class="item-content mb-16 lighter">
     <template v-for="(answer_text, index) in answer_text_list" :key="index">
       <div class="avatar mr-8" v-if="showAvatar">
-        <img v-if="application.avatar" :src="application.avatar" height="28px" width="28px" />
-        <LogoIcon v-else height="28px" width="28px" />
+        <!-- <img v-if="application.avatar" :src="application.avatar" height="28px" width="28px" />
+        <LogoIcon v-else height="28px" width="28px" /> -->
+       <img src="@/assets/logo/temp_logo.png" height="28px" width="28px" alt="">
       </div>
       <div
         class="content"
