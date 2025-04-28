@@ -2,7 +2,8 @@
   <!-- 开场白组件 -->
   <div class="item-content mb-16">
     <div class="avatar mr-8" v-if="prologue && showAvatar">
-      <img v-if="application.avatar" :src="application.avatar" height="28px" width="28px" />
+      <img v-if="isCustom" src="@/assets/logo/temp_logo.png" height="28px" width="28px" alt="">
+      <img v-else-if="application.avatar" :src="application.avatar" height="28px" width="28px" />
       <LogoIcon v-else height="28px" width="28px" />
     </div>
     <div
@@ -33,6 +34,7 @@ const props = defineProps<{
   available: boolean
   type: 'log' | 'ai-chat' | 'debug-ai-chat'
   sendMessage: (question: string, other_params_data?: any, chat?: chatType) => void
+  isCustom?: boolean
 }>()
 
 const { user } = useStore()

@@ -2,9 +2,9 @@
   <div class="item-content mb-16 lighter">
     <template v-for="(answer_text, index) in answer_text_list" :key="index">
       <div class="avatar mr-8" v-if="showAvatar">
-        <!-- <img v-if="application.avatar" :src="application.avatar" height="28px" width="28px" />
-        <LogoIcon v-else height="28px" width="28px" /> -->
-       <img src="@/assets/logo/temp_logo.png" height="28px" width="28px" alt="">
+       <img v-if="isCustom" src="@/assets/logo/temp_logo.png" height="28px" width="28px" alt="">
+        <img v-else-if="application.avatar" :src="application.avatar" height="28px" width="28px" />
+        <LogoIcon v-else height="28px" width="28px" />
       </div>
       <div
         class="content"
@@ -84,6 +84,7 @@ const props = defineProps<{
   sendMessage: (question: string, other_params_data?: any, chat?: chatType) => void
   chatManagement: any
   type: 'log' | 'ai-chat' | 'debug-ai-chat'
+  isCustom?: boolean
 }>()
 
 const { user } = useStore()
