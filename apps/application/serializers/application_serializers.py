@@ -148,10 +148,12 @@ class ModelSettingSerializer(serializers.Serializer):
                                                         error_messages=ErrMessage.char(_("Thinking process switch")))
     reasoning_content_start = serializers.CharField(required=False, allow_null=True, default="<think>",
                                                     allow_blank=True, max_length=256,
+                                                    trim_whitespace=False,
                                                     error_messages=ErrMessage.char(
                                                         _("The thinking process begins to mark")))
     reasoning_content_end = serializers.CharField(required=False, allow_null=True, allow_blank=True, default="</think>",
                                                   max_length=256,
+                                                  trim_whitespace=False,
                                                   error_messages=ErrMessage.char(_("End of thinking process marker")))
 
 
@@ -1071,6 +1073,7 @@ class ApplicationSerializer(serializers.Serializer):
             for update_key in update_keys:
                 if update_key in instance and instance.get(update_key) is not None:
                     application.__setattr__(update_key, instance.get(update_key))
+            print(application.name)
             application.save()
 
             if 'dataset_id_list' in instance:
@@ -1089,6 +1092,7 @@ class ApplicationSerializer(serializers.Serializer):
                 chat_cache.clear_by_application_id(application_id)
             application_access_token = QuerySet(ApplicationAccessToken).filter(application_id=application_id).first()
             # 更新缓存数据
+            print(application.name)
             get_application_access_token(application_access_token.access_token, False)
             return self.one(with_valid=False)
 
@@ -1141,6 +1145,8 @@ class ApplicationSerializer(serializers.Serializer):
                         instance['file_upload_enable'] = node_data['file_upload_enable']
                     if 'file_upload_setting' in node_data:
                         instance['file_upload_setting'] = node_data['file_upload_setting']
+                    if 'name' in node_data:
+                        instance['name'] = node_data['name']
                     break
 
         def speech_to_text(self, file, with_valid=True):

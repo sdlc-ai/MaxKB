@@ -10,7 +10,7 @@
     >
       <VueDraggable
         ref="el"
-        v-model="form_data.branch"
+        v-bind:modelValue="form_data.branch"
         :disabled="form_data.branch === 2"
         :filter="'.no-drag'"
         handle=".handle"
@@ -23,7 +23,9 @@
             v-resize="(wh: any) => resizeCondition(wh, item, index)"
             shadow="never"
             class="drag-card card-never mb-8"
-            :class="{ 'no-drag': index === form_data.branch.length - 1 }"
+            :class="{
+              'no-drag': index === form_data.branch.length - 1 || form_data.branch.length === 2
+            }"
             style="--el-card-padding: 12px"
           >
             <div class="handle flex-between lighter">
@@ -167,6 +169,7 @@ import { compareList } from '@/workflow/common/data'
 import { VueDraggable } from 'vue-draggable-plus'
 
 const props = defineProps<{ nodeModel: any }>()
+
 const form = {
   branch: [
     {
@@ -242,12 +245,16 @@ const validate = () => {
 }
 
 function onEnd(event?: any) {
-  const { oldIndex, newIndex, clonedData } = event
+  const { oldIndex, newIndex } = event
   if (oldIndex === undefined || newIndex === undefined) return
   const list = cloneDeep(props.nodeModel.properties.node_data.branch)
-
-  list[newIndex].type = list[oldIndex].type
-  list[oldIndex].type = clonedData.type // 恢复原始 type
+  if (oldIndex === list.length - 1 || newIndex === list.length - 1) {
+    return
+  }
+  const newInstance = { ...list[oldIndex], type: list[newIndex].type, id: list[newIndex].id }
+  const oldInstance = { ...list[newIndex], type: list[oldIndex].type, id: list[oldIndex].id }
+  list[newIndex] = newInstance
+  list[oldIndex] = oldInstance
   set(props.nodeModel.properties.node_data, 'branch', list)
 }
 
