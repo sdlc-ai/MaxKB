@@ -6,6 +6,7 @@
     @date：2023/9/22 11:32
     @desc:
 """
+import logging
 
 from django.utils.translation import gettext_lazy as _
 from drf_yasg.utils import swagger_auto_schema
@@ -518,6 +519,7 @@ class Document(APIView):
         def post(self, request: Request):
             split_data = {'file': request.FILES.getlist('file')}
             request_data = request.data
+            logging.getLogger("max_kb").error(request)
             if 'patterns' in request.data and request.data.get('patterns') is not None and len(
                     request.data.get('patterns')) > 0:
                 split_data.__setitem__('patterns', request_data.getlist('patterns'))
