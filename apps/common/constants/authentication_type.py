@@ -18,3 +18,5 @@ class AuthenticationType(Enum):
     API_KEY = "API_KEY"
     # 第三方对接
     PLATFORM = 'PLATFORM'
+    # 固定 Token 认证
+    FIXED_TOKEN = 'FIXED_TOKEN'

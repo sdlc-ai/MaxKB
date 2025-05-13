@@ -95,21 +95,37 @@ class TokenAuth(TokenAuthentication):
             raise AppAuthenticationFailed(1002, _('Authentication information is incorrect! illegal user'))
 
 
-# class FixedTokenAuthentication(TokenAuthentication):
-#     fixed_token = 'passwordfordify'
-#
-#     def authenticate(self, request):
-#         auth = request.META.get('HTTP_AUTHORIZATION')
-#
-#         if auth is None:
-#             raise AppAuthenticationFailed(403, _('The request is denied because of missing access permissions. Check your permissions and retry your request'))
-#
-#         try:
-#             scheme, token = auth.split()
-#             if scheme.lower() != 'bearer':
-#                 raise AppAuthenticationFailed(403, _('Invalid token scheme'))
-#         except ValueError:
-#             raise AppAuthenticationFailed(403, _('Invalid token header'))
-#
-#         if token != self.fixed_token:
-#             raise AppAuthenticationFailed(403, _('Invalid token'))
+logger = logging.getLogger(__name__)
+
+class FixedTokenAuthentication(TokenAuthentication):
+    fixed_token = 'passwordfordify'
+
+    def authenticate(self, request):
+        auth = request.META.get('HTTP_AUTHORIZATION')
+
+        logger.debug("开始 FixedTokenAuthentication 认证")
+
+        if auth is None:
+            logger.warning("没有提供 Authorization")
+            raise AppAuthenticationFailed(403, _('The request is denied because of missing access permissions...'))
+
+        try:
+            scheme, token = auth.split()
+            if scheme.lower() != 'bearer':
+                logger.warning(f"非法 Token 类型: {scheme}")
+                raise AppAuthenticationFailed(403, _('Invalid token scheme'))
+        except ValueError:
+            logger.warning("Token 格式错误")
+            raise AppAuthenticationFailed(403, _('Invalid token header'))
+
+        if token != self.fixed_token:
+            logger.warning(f"Token 不匹配: {token}")
+            return None  # 让其他 handler 处理
+
+        logger.info(" Token 匹配成功，进入 handle 流程")
+
+        from common.auth.handle.impl.fixed_token import FixedToken
+        return FixedToken().handle(request, token, lambda: None)
+
+    def authenticate_header(self, request):
+        return 'Bearer'
