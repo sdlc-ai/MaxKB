@@ -4536,7 +4536,7 @@ msgstr "修改知识库信息"
 #: community/apps/dataset/views/document.py:463
 #: community/apps/dataset/views/document.py:464
 msgid "Get the knowledge base paginated list"
-msgstr "获取知识库分页列表"
+msgstr "获取知识库文档分页列表"
 
 #: community/apps/dataset/views/document.py:31
 #: community/apps/dataset/views/document.py:32
@@ -7654,3 +7654,12 @@ msgstr "字段: {name} 未设置值"
 
 msgid "Generate related"
 msgstr "生成问题"
+
+msgid "Obtain graphical captcha"
+msgstr "获取图形验证码"
+
+msgid "Captcha code error or expiration"
+msgstr "验证码错误或过期"
+
+msgid "captcha"
+msgstr "验证码"

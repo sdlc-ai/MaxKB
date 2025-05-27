@@ -105,7 +105,8 @@ export default {
           label: '上傳的文件類型',
           documentText: '需要使用「文檔內容提取」節點解析文檔內容',
           imageText: '需要使用「圖片理解」節點解析圖片內容',
-          audioText: '需要使用「語音轉文本」節點解析音頻內容'
+          audioText: '需要使用「語音轉文本」節點解析音頻內容',
+          otherText: '需要自行解析該類型文件'
         }
       }
     },
@@ -222,14 +223,14 @@ export default {
     },
     mcpNode: {
       label: 'MCP 調用',
-      text: '透過SSE方式執行MCP服務中的工具',
+      text: '透過SSE/Streamable HTTP方式執行MCP服務中的工具',
       getToolsSuccess: '獲取工具成功',
       getTool: '獲取工具',
       tool: '工具',
       toolParam: '工具變數',
       mcpServerTip: '請輸入JSON格式的MCP服務器配置',
       mcpToolTip: '請選擇工具',
-      configLabel: 'MCP Server Config (僅支持SSE調用方式)'
+      configLabel: 'MCP Server Config (僅支持SSE/Streamable HTTP調用方式)'
     },
     imageGenerateNode: {
       label: '圖片生成',

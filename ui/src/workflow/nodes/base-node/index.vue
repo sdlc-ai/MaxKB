@@ -314,7 +314,9 @@ const switchFileUpload = () => {
     document: true,
     image: false,
     audio: false,
-    video: false
+    video: false,
+    other: false,
+    otherExtensions: ['PPT', 'DOC']
   }
 
   if (form_data.value.file_upload_enable) {

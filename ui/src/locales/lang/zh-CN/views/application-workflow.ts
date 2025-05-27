@@ -105,8 +105,10 @@ export default {
           label: '上传的文件类型',
           documentText: '需要使用“文档内容提取”节点解析文档内容',
           imageText: '需要使用“视觉模型”节点解析图片内容',
-          audioText: '需要使用“语音转文本”节点解析音频内容'
-        }
+          audioText: '需要使用“语音转文本”节点解析音频内容',
+          otherText: '需要自行解析该类型文件'
+        },
+        
       }
     },
     aiChatNode: {
@@ -222,14 +224,14 @@ export default {
     },
     mcpNode: {
       label: 'MCP 调用',
-      text: '通过SSE方式执行MCP服务中的工具',
+      text: '通过SSE/Streamable HTTP方式执行MCP服务中的工具',
       getToolsSuccess: '获取工具成功',
       getTool: '获取工具',
       tool: '工具',
       toolParam: '工具参数',
       mcpServerTip: '请输入JSON格式的MCP服务器配置',
       mcpToolTip: '请选择工具',
-      configLabel: 'MCP Server Config (仅支持SSE调用方式)'
+      configLabel: 'MCP Server Config (仅支持SSE/Streamable HTTP调用方式)'
     },
     imageGenerateNode: {
       label: '图片生成',
