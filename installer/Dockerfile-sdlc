@@ -1,6 +1,7 @@
 FROM sdlc-vector-model:v1.0.1 AS vector-model
 FROM node:18-alpine3.18 AS web-build
 COPY ui ui
+ENV NODE_OPTIONS="--max-old-space-size=4096"
 RUN cd ui && \
     npm install && \
     npm run build && \
