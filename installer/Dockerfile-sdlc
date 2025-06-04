@@ -24,6 +24,8 @@ WORKDIR /opt/maxkb/app
 RUN export POETRY_PYPI_MIRROR_URL=https://mirrors.cloud.tencent.com/pypi/simple/
 RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 RUN python3 -m venv /opt/py3 && \
+    pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple && \
+    pip config set global.trusted-host pypi.tuna.tsinghua.edu.cn && \
     pip install poetry==1.8.5 --break-system-packages && \
     poetry config virtualenvs.create false && \
     . /opt/py3/bin/activate && \
