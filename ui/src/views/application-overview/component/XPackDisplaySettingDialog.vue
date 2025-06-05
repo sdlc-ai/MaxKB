@@ -41,13 +41,16 @@
                   >
                     <img :src="detail?.icon" alt="" />
                   </AppAvatar>
-                  <AppAvatar
+                  <!-- <AppAvatar
                     v-else-if="detail?.name"
                     :name="detail?.name"
                     pinyinColor
                     shape="square"
                     :size="32"
-                  />
+                  /> -->
+                  <AppAvatar v-else-if="detail?.name" shape="square" :size="32">
+                    <img src="@/assets/icon/application.png" alt="" />
+                  </AppAvatar>
                 </div>
 
                 <h4 class="ellipsis">
@@ -405,7 +408,12 @@
     <template #footer>
       <span class="dialog-footer">
         <el-button @click.prevent="dialogVisible = false">{{ $t('common.cancel') }} </el-button>
-        <el-button type="primary" class="custom-btn" @click="submit(displayFormRef)" :loading="loading">
+        <el-button
+          type="primary"
+          class="custom-btn"
+          @click="submit(displayFormRef)"
+          :loading="loading"
+        >
           {{ $t('common.save') }}
         </el-button>
       </span>
@@ -556,7 +564,9 @@ const open = (data: any, content: any) => {
     theme_color: data.custom_theme?.theme_color || '',
     header_font_color: data.custom_theme?.header_font_color || '#1f2329'
   }
-  xpackForm.value.float_location = data.float_location
+  if (data.float_location) {
+    xpackForm.value.float_location = data.float_location
+  }
   dialogVisible.value = true
 }
 

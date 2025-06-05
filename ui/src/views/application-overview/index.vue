@@ -189,9 +189,8 @@
     <XPackDisplaySettingDialog
       ref="XPackDisplaySettingDialogRef"
       @refresh="refresh"
-      v-if="user.isEnterprise()"
     />
-    <DisplaySettingDialog ref="DisplaySettingDialogRef" @refresh="refresh" v-else />
+    <!-- <DisplaySettingDialog ref="DisplaySettingDialogRef" @refresh="refresh" v-else /> -->
   </LayoutContainer>
 </template>
 <script setup lang="ts">
@@ -286,11 +285,12 @@ function toUrl(url: string) {
   window.open(url, '_blank')
 }
 function openDisplaySettingDialog() {
-  if (user.isEnterprise()) {
-    XPackDisplaySettingDialogRef.value?.open(accessToken.value, detail.value)
-  } else {
-    DisplaySettingDialogRef.value?.open(accessToken.value, detail.value)
-  }
+      XPackDisplaySettingDialogRef.value?.open(accessToken.value, detail.value)
+  // if (user.isEnterprise()) {
+  //   XPackDisplaySettingDialogRef.value?.open(accessToken.value, detail.value)
+  // } else {
+  //   XPackDisplaySettingDialogRef.value?.open(accessToken.value, detail.value)
+  // }
 }
 function openEditAvatar() {
   EditAvatarDialogRef.value.open(detail.value)
