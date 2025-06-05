@@ -145,7 +145,6 @@
               :chatId="currentChatId"
               @refresh="refresh"
               @scroll="handleScroll"
-              isCustom
             >
             </AiChat>
           </div>

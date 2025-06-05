@@ -31,7 +31,6 @@
             :application="applicationDetails"
             :available="available"
             :send-message="sendMessage"
-            :isCustom="isCustom"
           ></PrologueContent>
 
           <template v-for="(item, index) in chatList" :key="index">
@@ -49,7 +48,6 @@
               :type="type"
               :send-message="sendMessage"
               :chat-management="ChatManagement"
-              :isCustom="isCustom"
             ></AnswerContent>
           </template>
           <TransitionContent
