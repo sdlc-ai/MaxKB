@@ -1,13 +1,13 @@
 export default {
-  title: '函数库',
-  internalTitle: '内置函数',
+  title: '插件库',
+  internalTitle: '内置插件',
   added: '已添加',
-  createFunction: '创建函数',
-  editFunction: '编辑函数',
-  copyFunction: '复制函数',
-  importFunction: '导入函数',
+  createFunction: '创建插件',
+  editFunction: '编辑插件',
+  copyFunction: '复制插件',
+  importFunction: '导入插件',
   searchBar: {
-    placeholder: '按函数名称搜索',
+    placeholder: '按插件名称搜索',
     search:'搜索'
   },
   setting: {
@@ -17,12 +17,12 @@ export default {
     saveMessage: '当前的更改尚未保存，确认退出吗?'
   },
   delete: {
-    confirmTitle: '是否删除函数：',
-    confirmMessage: '删除后，引用了该函数的应用提问时会报错 ，请谨慎操作。'
+    confirmTitle: '是否删除插件：',
+    confirmMessage: '删除后，引用了该插件的应用提问时会报错 ，请谨慎操作。'
   },
   disabled: {
-    confirmTitle: '是否禁用函数：',
-    confirmMessage: '禁用后，引用了该函数的应用提问时会报错 ，请谨慎操作。'
+    confirmTitle: '是否禁用插件：',
+    confirmMessage: '禁用后，引用了该插件的应用提问时会报错 ，请谨慎操作。'
   },
   functionForm: {
     title: {
@@ -32,13 +32,13 @@ export default {
     form: {
       functionName: {
         label: '名称',
-        name: '函数名称',
-        placeholder: '请输入函数名称',
-        requiredMessage: '请输入函数名称'
+        name: '插件名称',
+        placeholder: '请输入插件名称',
+        requiredMessage: '请输入插件名称'
       },
       functionDescription: {
         label: '描述',
-        placeholder: '请输入函数的描述'
+        placeholder: '请输入插件的描述'
       },
       permission_type: {
         label: '权限',
@@ -61,9 +61,9 @@ export default {
         label: '是否必填'
       },
       param: {
-        paramInfo1: '使用函数时显示',
-        paramInfo2: '使用函数时不显示',
-        code: '函数内容（Python）',
+        paramInfo1: '使用插件时显示',
+        paramInfo2: '使用插件时不显示',
+        code: '插件内容（Python）',
         selectPlaceholder: '请选择参数',
         inputPlaceholder: '请输入参数值'
       },

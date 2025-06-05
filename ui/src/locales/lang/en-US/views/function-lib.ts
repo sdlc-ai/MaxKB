@@ -1,11 +1,11 @@
 export default {
-  title: 'Function',
-  internalTitle: 'Internal Function',
+  title: 'Plugin',
+  internalTitle: 'Internal Plugin',
   added: 'Added',
-  createFunction: 'Create Function',
-  editFunction: 'Edit Function',
-  copyFunction: 'Copy Function',
-  importFunction: 'Import Function',
+  createFunction: 'Create Plugin',
+  editFunction: 'Edit Plugin',
+  copyFunction: 'Copy Plugin',
+  importFunction: 'Import Plugin',
   searchBar: {
     placeholder: 'Search by function name',
     search:'Search'
@@ -34,7 +34,7 @@ export default {
     form: {
       functionName: {
         label: 'Name',
-        name: 'Function Name',
+        name: 'Plugin Name',
         placeholder: 'Please enter the function name',
         requiredMessage: 'Please enter the function name'
       },

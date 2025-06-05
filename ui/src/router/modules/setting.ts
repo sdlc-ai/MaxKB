@@ -57,8 +57,8 @@ const settingRouter = {
       path: '/system',
       name: 'system',
       meta: {
-        icon: 'app-setting',
-        iconActive: 'app-setting-active',
+        icon: 'ri-settings-4-line',
+        iconActive: 'ri-settings-4-fill',
         title: 'views.system.subTitle',
         activeMenu: '/setting',
         parentPath: '/setting',
