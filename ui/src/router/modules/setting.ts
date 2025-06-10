@@ -74,7 +74,7 @@ const settingRouter = {
             activeMenu: '/setting',
             parentPath: '/setting',
             parentName: 'setting',
-            permission: new ComplexPermission(['ADMIN'], ['x-pack'], 'AND')
+            // permission: new ComplexPermission(['ADMIN'], ['x-pack'], 'AND')
           },
           component: () => import('@/views/theme/index.vue')
         },
@@ -82,11 +82,11 @@ const settingRouter = {
           path: '/system/authentication',
           name: 'authentication',
           meta: {
-            title: 'views.system.authentication.title',
+            title: 'views.system.authentication.title', 
             activeMenu: '/setting',
             parentPath: '/setting',
             parentName: 'setting',
-            permission: new ComplexPermission(['ADMIN'], ['x-pack'], 'AND')
+            // permission: new ComplexPermission(['ADMIN'], ['x-pack'], 'AND')
           },
           component: () => import('@/views/authentication/index.vue')
         },
@@ -114,7 +114,7 @@ const settingRouter = {
         activeMenu: '/setting',
         parentPath: '/setting',
         parentName: 'setting',
-        permission: new ComplexPermission(['ADMIN'], ['x-pack'], 'AND')
+        // permission: new ComplexPermission(['ADMIN'], ['x-pack'], 'AND')
       },
       component: () => import('@/views/operate-log/index.vue')
     }
