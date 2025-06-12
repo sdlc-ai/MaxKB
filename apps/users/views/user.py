@@ -38,6 +38,7 @@ class Profile(APIView):
     @swagger_auto_schema(operation_summary=_("Get MaxKB related information"),
                          operation_id=_("Get MaxKB related information"),
                          responses=result.get_api_response(SystemSerializer.get_response_body_api()),
+                         security=[],
                          tags=[_('System parameters')])
     def get(self, request: Request):
         return result.success(SystemSerializer.get_profile())
