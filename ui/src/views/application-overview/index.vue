@@ -187,10 +187,11 @@
     <LimitDialog ref="LimitDialogRef" @refresh="refresh" />
     <EditAvatarDialog ref="EditAvatarDialogRef" @refresh="refreshIcon" />
     <XPackDisplaySettingDialog
+     v-if="user.isEnterprise()"
       ref="XPackDisplaySettingDialogRef"
       @refresh="refresh"
     />
-    <!-- <DisplaySettingDialog ref="DisplaySettingDialogRef" @refresh="refresh" v-else /> -->
+    <DisplaySettingDialog ref="DisplaySettingDialogRef" @refresh="refresh" v-else />
   </LayoutContainer>
 </template>
 <script setup lang="ts">
@@ -285,7 +286,8 @@ function toUrl(url: string) {
   window.open(url, '_blank')
 }
 function openDisplaySettingDialog() {
-      XPackDisplaySettingDialogRef.value?.open(accessToken.value, detail.value)
+   DisplaySettingDialogRef.value?.open(accessToken.value, detail.value)
+  // XPackDisplaySettingDialogRef.value?.open(accessToken.value, detail.value)
   // if (user.isEnterprise()) {
   //   XPackDisplaySettingDialogRef.value?.open(accessToken.value, detail.value)
   // } else {
