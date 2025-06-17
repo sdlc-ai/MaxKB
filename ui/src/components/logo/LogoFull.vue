@@ -66,7 +66,7 @@ defineOptions({ name: 'LogoFull' })
 defineProps({
   height: {
     type: String,
-    default: '36px'
+    default: '28px'
   }
 })
 const { user } = useStore()
