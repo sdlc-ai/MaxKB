@@ -48,7 +48,7 @@
 
         <div class="mt-16">
           <el-text type="info">
-            <div>{{ $t('common.author') }}: MaxKB</div>
+            <div>{{ $t('common.author') }}: 系统内置</div>
           </el-text>
         </div>
       </div>

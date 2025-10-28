@@ -145,7 +145,7 @@
               <template #footer>
                 <div class="footer-content flex-between">
                   <div>
-                    <span v-if="item.template_id"> {{ $t('common.author') }}: MaxKB</span>
+                    <span v-if="item.template_id"> {{ $t('common.author') }}: 系统内置</span>
                   </div>
                   <div @click.stop>
                     <el-switch
@@ -253,7 +253,7 @@
               <div class="status-button"></div>
               <template #footer>
                 <div class="footer-content flex-between">
-                  <div>{{ $t('common.author') }}: MaxKB</div>
+                  <div>{{ $t('common.author') }}: 系统内置</div>
                   <div @click.stop>
                     <el-button type="primary" link @click="addInternalFunction(item)">
                       {{ $t('common.add') }}
