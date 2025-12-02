@@ -1,7 +1,6 @@
 FROM sdlc-vector-model:v1.0.1 AS vector-model
 FROM node:18-alpine3.18 AS web-build
 COPY ui ui
-ENV NODE_OPTIONS="--max-old-space-size=4096"
 RUN cd ui && \
     npm install && \
     npm run build && \
@@ -22,11 +21,7 @@ RUN mkdir -p /opt/maxkb/app /opt/maxkb/model /opt/maxkb/conf && \
 
 COPY --from=web-build ui /opt/maxkb/app/ui
 WORKDIR /opt/maxkb/app
-RUN export POETRY_PYPI_MIRROR_URL=https://mirrors.cloud.tencent.com/pypi/simple/
-RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 RUN python3 -m venv /opt/py3 && \
-    pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple && \
-    pip config set global.trusted-host pypi.tuna.tsinghua.edu.cn && \
     pip install poetry==1.8.5 --break-system-packages && \
     poetry config virtualenvs.create false && \
     . /opt/py3/bin/activate && \
