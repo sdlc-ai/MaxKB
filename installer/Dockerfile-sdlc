@@ -8,7 +8,6 @@ RUN cd ui && \
     rm -rf ./node_modules
 FROM sdlc-python-pg:python3.11-pg15.8 AS stage-build
 
-
 ARG DEPENDENCIES="                    \
         python3-pip"
 
